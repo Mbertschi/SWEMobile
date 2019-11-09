@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinIntro.MainPage">
+
+   
+        
+            <Grid>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Button_0" Grid.Row="5" Grid.Column="0"
+                       Text="0"
+                        Grid.ColumnSpan="2"
+                        Clicked="Button_0_Clicked">
+                       
+                </Button>
+                <Button x:Name="Button_1" Grid.Row="4" Grid.Column="0"
+                       Text="1"
+                        Clicked="Button_1_Clicked">
+                </Button>
+                <Button x:Name="Label_2" Grid.Row="4" Grid.Column="1"
+                       Text="2">
+                </Button>
+                <Button x:Name="Label_3" Grid.Row="4" Grid.Column="2"
+                       Text="3">
+                </Button>
+                <Button x:Name="Label_4" Grid.Row="3" Grid.Column="0"
+                       Text="4">
+                </Button>
+                <Button x:Name="Label_5" Grid.Row="3" Grid.Column="1"
+                       Text="5">
+                </Button>
+                <Button x:Name="Label_6" Grid.Row="3" Grid.Column="2"
+                       Text="6">
+                </Button>
+                <Button x:Name="Label_7" Grid.Row="2" Grid.Column="0"
+                       Text="7">
+                </Button>
+                <Button x:Name="Label_8" Grid.Row="2" Grid.Column="1"
+                       Text="8">
+                </Button>
+                <Button x:Name="Label_9" Grid.Row="2" Grid.Column="2"
+                       Text="9">
+                </Button>
+                <Button x:Name="Label_Coma" Grid.Row="5" Grid.Column="2"
+                       Text=",">
+                </Button>
+                <Button x:Name="Button_Gleich" Grid.Row="5" Grid.Column="3"
+                       Text="="
+                        BackgroundColor="Orange"
+                        Clicked="Button_Gleich_Clicked">
+                </Button>
+                <Button x:Name="Button_Plus" Grid.Row="4" Grid.Column="3"
+                       Text="+"
+                        BackgroundColor="Orange"
+                        Clicked="Button_Plus_Clicked">
+                </Button>
+                <Button x:Name="Button_Minus" Grid.Row="3" Grid.Column="3"
+                       Text="-"
+                        BackgroundColor="Orange">
+                </Button>
+                <Button x:Name="Label_Mal" Grid.Row="2" Grid.Column="3"
+                       Text="*"
+                        BackgroundColor="Orange">
+                </Button>
+                <Button x:Name="Button_Durch" Grid.Row="1" Grid.Column="3"
+                       Text="/"
+                        BackgroundColor="Orange">
+                </Button>
+                <Button x:Name="Button_AC" Grid.Row="1" Grid.Column="0"
+                       Text="AC"
+                        BackgroundColor="Orange">
+                </Button>
+                <Button x:Name="Button_Prozent" Grid.Row="1" Grid.Column="2"
+                       Text="%"
+                        BackgroundColor="Orange">
+                </Button>
+                <Button x:Name="Button_PlusMinus" Grid.Row="1" Grid.Column="1"
+                       Text="+/-"
+                        BackgroundColor="Orange">
+                        
+                </Button>
+                <Label x:Name="Sumary"
+                       Text="0"
+                       HorizontalOptions="End"
+                       VerticalOptions="End"
+                       Grid.ColumnSpan="4"
+                       
+                       
+                       >
+            
+                 </Label>
+
+            </Grid>
+       
+     
+   
+    
+
+</ContentPage>
