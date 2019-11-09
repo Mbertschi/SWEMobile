@@ -24,28 +24,23 @@ namespace XamarinIntro
 
         private void Button_Gleich_Clicked(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Button_Plus_Clicked(object sender, EventArgs e)
         {
-            sumary = number1 + number2; 
-            
+
+            Sumary.Text = Sumary.Text + "+";
         }
 
         private void Button_0_Clicked(object sender, EventArgs e)
         {
-            if (number1 == null)
-            {
-                number1 = 0;
-            }
-            else { number2 = 0; }
+            Sumary.Text = Sumary.Text + 0.ToString();
         }
 
         private void Button_1_Clicked(object sender, EventArgs e)
         {
-            
-            Sumary.Text = 1.ToString;
+            Sumary.Text = Sumary.Text + 1.ToString();
         }
     }
 }

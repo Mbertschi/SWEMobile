@@ -97,7 +97,7 @@
                         
                 </Button>
                 <Label x:Name="Sumary"
-                       Text="0"
+                       Text=""
                        HorizontalOptions="End"
                        VerticalOptions="End"
                        Grid.ColumnSpan="4"
