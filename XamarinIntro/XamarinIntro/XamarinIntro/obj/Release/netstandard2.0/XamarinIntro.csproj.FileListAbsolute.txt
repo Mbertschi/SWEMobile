@@ -1,0 +1,7 @@
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro\obj\Release\netstandard2.0\MainPage.xaml.g.cs
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro\obj\Release\netstandard2.0\XamarinIntro.AssemblyInfoInputs.cache
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro\obj\Release\netstandard2.0\XamarinIntro.AssemblyInfo.cs
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro\obj\Release\netstandard2.0\XamarinIntro.dll
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro\obj\Release\netstandard2.0\ref\XamarinIntro.dll
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro\obj\Release\netstandard2.0\XamarinIntro.pdb

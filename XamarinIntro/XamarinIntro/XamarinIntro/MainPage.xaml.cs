@@ -49,37 +49,37 @@ namespace XamarinIntro
             Sumary.Text += 1.ToString();
         }
 
-        private void Label_4_Clicked(object sender, EventArgs e)
+        private void Button_4_Clicked(object sender, EventArgs e)
         {
             icalucate.AddNumber(4);
             Sumary.Text += 4.ToString();
         }
 
-        private void Label_3_Clicked(object sender, EventArgs e)
+        private void Button_3_Clicked(object sender, EventArgs e)
         {
             icalucate.AddNumber(3);
             Sumary.Text += 3.ToString();
         }
 
-        private void Label_5_Clicked(object sender, EventArgs e)
+        private void Button_5_Clicked(object sender, EventArgs e)
         {
             icalucate.AddNumber(5);
             Sumary.Text += 5.ToString();
         }
 
-        private void Label_6_Clicked(object sender, EventArgs e)
+        private void Button_6_Clicked(object sender, EventArgs e)
         {
             icalucate.AddNumber(6);
             Sumary.Text += 6.ToString();
         }
 
-        private void Label_7_Clicked(object sender, EventArgs e)
+        private void Button_7_Clicked(object sender, EventArgs e)
         {
             icalucate.AddNumber(7);
             Sumary.Text += 7.ToString();
         }
 
-        private void Label_8_Clicked(object sender, EventArgs e)
+        private void Button_8_Clicked(object sender, EventArgs e)
         {
 
             icalucate.AddNumber(8);
@@ -87,19 +87,19 @@ namespace XamarinIntro
             Sumary.Text += 8.ToString();
         }
 
-        private void Label_9_Clicked(object sender, EventArgs e)
+        private void Button_9_Clicked(object sender, EventArgs e)
         {
             icalucate.AddNumber(9);
             Sumary.Text += 9.ToString();
         }
 
-        private void Label_Coma_Clicked(object sender, EventArgs e)
+        private void Button_Coma_Clicked(object sender, EventArgs e)
         {
             
             Sumary.Text += ",";
         }
 
-        private void Label_Mal_Clicked(object sender, EventArgs e)
+        private void Button_Mal_Clicked(object sender, EventArgs e)
         {
             icalucate.AddOperator(Operator.Multipication);
             Sumary.Text += "*";

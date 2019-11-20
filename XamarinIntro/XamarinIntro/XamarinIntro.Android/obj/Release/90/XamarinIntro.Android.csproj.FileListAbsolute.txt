@@ -1,0 +1,4 @@
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro.Android\obj\Release\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro.Android\obj\Release\90\build.props
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro.Android\obj\Release\90\adb.props
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro.Android\obj\Release\90\XamarinIntro.Android.csprojAssemblyReference.cache
