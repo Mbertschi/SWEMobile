@@ -1,0 +1,1 @@
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\XamarinIntro\XamarinIntro.UWP\XamarinIntro.UWP.csproj;x86

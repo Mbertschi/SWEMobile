@@ -4,7 +4,6 @@ using System.Text;
 
 namespace XamarinIntro
 
-
 {
     public enum Operator
     {
@@ -14,18 +13,19 @@ namespace XamarinIntro
         Division = 4
     }
 
-    interface ICalculator
+    public interface ICalculator
     {
-         void AddNumber(int inNumber);
+        void AddNumber(int inNumber);
 
-         void AddOperator(Operator inOpterator);
+        void AddOperator(Operator inOpterator);
 
         String getSumary();
+
         void resetValues();
 
 
     }
-    class Calculator : ICalculator
+    public class Calculator : ICalculator
 
     {
 
@@ -36,22 +36,23 @@ namespace XamarinIntro
 
 
 
-        public void AddNumber(int inNumber) {
+        public void AddNumber(int inNumber)
+        {
 
 
-            addedNumber1 = addedNumber1*10+inNumber; 
+            addedNumber1 = addedNumber1 * 10 + inNumber;
 
         }
 
         public void AddOperator(Operator inOperator)
         {
             calct = inOperator;
-            if(addedNumber2 == 0)
+            if (addedNumber2 == 0)
             {
                 addedNumber2 = addedNumber1;
                 addedNumber1 = 0;
             }
-            
+
         }
 
         public void resetValues()
@@ -60,13 +61,13 @@ namespace XamarinIntro
             addedNumber2 = 0;
         }
 
-        private void calculate( int number1 , int numberTwo, Operator inoperator)
+        private void calculate(int number1, int numberTwo, Operator inoperator)
         {
             int i = (int)inoperator;
-             switch (i)
+            switch (i)
             {
                 case 1:
-                   
+
                     sumary = number1 + numberTwo;
                     break;
                 case 2:
@@ -91,16 +92,17 @@ namespace XamarinIntro
 
         }
 
-        public String getSumary(){
-          calculate(addedNumber2, addedNumber1, calct);
+        public String getSumary()
+        {
+            calculate(addedNumber2, addedNumber1, calct);
             addedNumber2 = sumary;
             addedNumber1 = 0;
-     
+
             return sumary.ToString();
         }
 
 
 
-        }
     }
+}
 

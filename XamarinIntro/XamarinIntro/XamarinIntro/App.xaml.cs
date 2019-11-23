@@ -10,7 +10,7 @@ namespace XamarinIntro
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainPage(new Calculator());
         }
 
         protected override void OnStart()

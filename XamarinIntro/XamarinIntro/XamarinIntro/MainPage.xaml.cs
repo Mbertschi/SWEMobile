@@ -13,10 +13,11 @@ namespace XamarinIntro
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        private ICalculator icalucate = new Calculator();
+        private ICalculator icalucate;
 
-        public MainPage()
+        public MainPage(ICalculator inncalculator)
         {
+            this.icalucate = inncalculator;
             InitializeComponent();
          
         }
@@ -127,7 +128,7 @@ namespace XamarinIntro
             
         }
 
-        private void Label_2_Clicked(object sender, EventArgs e)
+        private void Button_2_Clicked(object sender, EventArgs e)
         {
             icalucate.AddNumber(2);
             Sumary.Text += 2.ToString();

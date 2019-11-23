@@ -49,7 +49,7 @@
                 </Button>
                 <Button x:Name="Button_5" Grid.Row="3" Grid.Column="1"
                        Text="5"
-                        Clicked="Buttonl_5_Clicked">
+                        Clicked="Button_5_Clicked">
                 </Button>
                 <Button x:Name="Button_6" Grid.Row="3" Grid.Column="2"
                        Text="6"
