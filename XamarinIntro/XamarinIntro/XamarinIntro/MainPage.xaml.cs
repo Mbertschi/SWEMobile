@@ -28,7 +28,7 @@ namespace XamarinIntro
         private void Button_Gleich_Clicked(object sender, EventArgs e)
         {
             
-            Sumary.Text = icalucate.getSumary();
+            Sumary.Text = icalucate.getSumary().ToString();
         }
 
         private void Button_Plus_Clicked(object sender, EventArgs e)
@@ -40,64 +40,64 @@ namespace XamarinIntro
 
         private void Button_0_Clicked(object sender, EventArgs e)
         {
-            icalucate.AddNumber(0);
+            icalucate.AddNumber(Operant.Zero);
             Sumary.Text += 0.ToString();
         }
 
         private void Button_1_Clicked(object sender, EventArgs e)
         {
-            icalucate.AddNumber(1);
+            icalucate.AddNumber(Operant.One);
             Sumary.Text += 1.ToString();
         }
 
         private void Button_4_Clicked(object sender, EventArgs e)
         {
-            icalucate.AddNumber(4);
+            icalucate.AddNumber(Operant.Four);
             Sumary.Text += 4.ToString();
         }
 
         private void Button_3_Clicked(object sender, EventArgs e)
         {
-            icalucate.AddNumber(3);
+            icalucate.AddNumber(Operant.Three);
             Sumary.Text += 3.ToString();
         }
 
         private void Button_5_Clicked(object sender, EventArgs e)
         {
-            icalucate.AddNumber(5);
+            icalucate.AddNumber(Operant.Five);
             Sumary.Text += 5.ToString();
         }
 
         private void Button_6_Clicked(object sender, EventArgs e)
         {
-            icalucate.AddNumber(6);
+            icalucate.AddNumber(Operant.Six);
             Sumary.Text += 6.ToString();
         }
 
         private void Button_7_Clicked(object sender, EventArgs e)
         {
-            icalucate.AddNumber(7);
+            icalucate.AddNumber(Operant.Seven);
             Sumary.Text += 7.ToString();
         }
 
         private void Button_8_Clicked(object sender, EventArgs e)
         {
 
-            icalucate.AddNumber(8);
+            icalucate.AddNumber(Operant.Eight);
            
             Sumary.Text += 8.ToString();
         }
 
         private void Button_9_Clicked(object sender, EventArgs e)
         {
-            icalucate.AddNumber(9);
+            icalucate.AddNumber(Operant.Nine);
             Sumary.Text += 9.ToString();
         }
 
         private void Button_Coma_Clicked(object sender, EventArgs e)
         {
             
-            Sumary.Text += ",";
+            Sumary.Text += icalucate.AddComa(); ;
         }
 
         private void Button_Mal_Clicked(object sender, EventArgs e)
@@ -120,17 +120,17 @@ namespace XamarinIntro
 
         private void Button_Prozent_Clicked(object sender, EventArgs e)
         {
-
+            Sumary.Text = icalucate.DivideBy100();
         }
 
         private void Button_PlusMinus_Clicked(object sender, EventArgs e)
-        {
-            
+        {   
+           Sumary.Text = icalucate.ChangeSign();   
         }
 
         private void Button_2_Clicked(object sender, EventArgs e)
         {
-            icalucate.AddNumber(2);
+            icalucate.AddNumber(Operant.Two);
             Sumary.Text += 2.ToString();
         }
 
