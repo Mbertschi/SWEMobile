@@ -146,28 +146,7 @@ namespace XamarinIntro.Tests
 
         }
 
-        [TestMethod]
-        public void GetSumary_AddOperand_ThenAddComa_ThenAddOperant_ThenAddOperator_ThenAddOperant_ThenGetExpectedSumary()
-        {
-            //Arrange
-            string excpectedResult = "0.2";
 
-            Calculator calculator = new Calculator();
-            calculator.AddNumber(Operant.Five);
-            calculator.AddComa();
-            calculator.AddNumber(Operant.Two);
-            calculator.AddOperator(Operator.Subtraction);
-            calculator.AddNumber(Operant.Five);
-            var result = calculator.getSumary();
-            //Act,
-            
-            result = calculator.getSumary();
-
-
-            //Assert
-            Assert.AreEqual(excpectedResult, result);
-
-        }
 
         [TestMethod]
         public void AddComaWithoutaNumber()
