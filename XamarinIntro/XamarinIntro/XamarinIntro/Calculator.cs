@@ -159,7 +159,7 @@ namespace XamarinIntro
         {
             calculate(addedNumber2, addedNumber1, calct);
             addedNumber2 = sumary.ToString();
-            addedNumber1 = null;
+            addedNumber1 =  null;
 
             return sumary.ToString();
         }
