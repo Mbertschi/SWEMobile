@@ -19,7 +19,6 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg' # Required when command == Push
     restoreSolution: '**/*.sln'
 
 - task: XamarinAndroid@1
