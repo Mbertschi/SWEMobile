@@ -1,0 +1,3 @@
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\Calculator.Test\obj\Debug\netcoreapp3.0\Calculator.Test.csprojAssemblyReference.cache
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\Calculator.Test\obj\Debug\netcoreapp3.0\Calculator.Test.AssemblyInfoInputs.cache
+C:\Codes\SWEMobile\SWEMobile\XamarinIntro\Calculator.Test\obj\Debug\netcoreapp3.0\Calculator.Test.AssemblyInfo.cs
