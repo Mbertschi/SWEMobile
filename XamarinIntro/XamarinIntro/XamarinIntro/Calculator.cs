@@ -116,7 +116,7 @@ namespace XamarinIntro
         {
             int i = (int)inoperator;
 
-            double value1 =0;
+            double value1 = 0;
             if(addedNumber2 != null)
             {
                 value1 = double.Parse(numberone, System.Globalization.CultureInfo.InvariantCulture);
