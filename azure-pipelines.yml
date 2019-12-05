@@ -15,15 +15,6 @@ variables:
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
 
 steps:
-- task: DotNetCoreCLI@2
-  inputs:
-    command: restore
-    projects: '**/*.csproj'
-    feedsToUse: config
-    nugetConfigPath: NuGet.config    # Relative to root of the repository
-    externalFeedCredentials: <Name of the NuGet service connection>
-
-
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
