@@ -25,9 +25,4 @@ steps:
   inputs:
     projectFile: '**/*droid*.csproj'
     outputDirectory: '$(outputDirectory)'
-    jdkOption: 'JDKVersion'
-    msbuildVersionOption: 'latest'
     configuration: '$(buildConfiguration)'
-
-    
-    
