@@ -27,6 +27,12 @@ steps:
     projectFile: '**/*droid*.csproj'
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
+
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: '*/.apk'
+    apksign: false
+    zipalign: false
     
 - task: DotNetCoreCLI@2
   inputs:
