@@ -36,14 +36,11 @@ steps:
     arguments: '--configuration $(buildConfiguration)'
 
 
-- task: VSTest@2
+- task: Xcode@5
   inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*test*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
+    actions: 'build'
+    packageApp: true
+    signingOption: 'auto'
 
 
 - task: AndroidSigning@3
