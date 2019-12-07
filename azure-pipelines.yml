@@ -45,14 +45,5 @@ steps:
     testResultsFiles: '**/*.trx'
 
 
-- task: AndroidSigning@3
-  inputs:
-   apkFiles: '**/*.apk'
-   apksign: true
-   apksignerKeystoreFile: 'production.keystore'
-   apksignerKeystorePassword: 'keystorepwd'
-   apksignerKeystoreAlias: 'key0'
-   apksignerKeyPassword: 'aliaspwd'
-   apksignerArguments: --out $(Build.SourcesDirectory)/app/build/outputs/apk/release/my-crazy-app.release.apk
-   zipalign: true
+
 
