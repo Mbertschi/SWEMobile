@@ -28,14 +28,27 @@ steps:
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
 
-- task: AndroidSigning@3
-  inputs:
-    apkFiles: '*/.apk'
-    apksign: false
-    zipalign: false
     
 - task: DotNetCoreCLI@2
   inputs:
     command: test
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
+
+
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+
+
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: '*/.apk'
+    apksign: false
+    zipalign: false
+
