@@ -6,15 +6,18 @@
 trigger:
 - master
 
-
 pool:
-- vmImage: 'macos-latest'
+  vmImage: 'macos-latest'
 
+variables:
+  buildConfiguration: 'Release'
+  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+
+steps:
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
   inputs:
-    command: 'restore'
     restoreSolution: '**/*.sln'
 
 - task: XamarinAndroid@1
@@ -22,22 +25,6 @@ pool:
     projectFile: '**/*droid*.csproj'
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
-
-# do this after other tasks such as building
-
-    
-- task: DotNetCoreCLI@2
-  inputs:
-    command: test
-    projects: '**/*Tests/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
-
-- task: PublishTestResults@2
-  condition: succeededOrFailed()
-  inputs:
-    testRunner: VSTest
-    testResultsFiles: '**/*.trx'
-
 
 
 
