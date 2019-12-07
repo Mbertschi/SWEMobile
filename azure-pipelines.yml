@@ -47,9 +47,3 @@ steps:
 
 
 
-- task: AppCenterTest@1
-  inputs:
-    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
-    frameworkOption: 'xcuitest'
-    credentialsOption: 'serviceEndpoint'
-    localeOption: 'en_US'
