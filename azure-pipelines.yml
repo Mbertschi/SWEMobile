@@ -7,74 +7,37 @@ trigger:
 - master
 
 
+pool:
+- vmImage: 'macos-latest'
 
+- task: NuGetToolInstaller@1
 
-jobs:
-	
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
 
-	- job: Test
-	  pool:
-	    vmImage: 'VS2017-Win2016'
-	  steps:
-	  - task: NuGetToolInstaller@0
-	
+- task: XamarinAndroid@1
+  inputs:
+    projectFile: '**/*droid*.csproj'
+    outputDirectory: '$(outputDirectory)'
+    configuration: '$(buildConfiguration)'
 
-	  - task: NuGetCommand@2
-	    inputs:
-	      restoreSolution: '**/*.sln'
-	  - task: DotNetCoreCLI@2
-	    displayName: Build
-	    inputs:
-	        command: build
-	        projects: '**/*Test*.csproj'
-	        arguments: '--configuration Release'
-	  - task: DotNetCoreCLI@2
-	    inputs:
-	      command: 'test'
-	      projects: '**/*Test*.csproj'
-	
+# do this after other tasks such as building
 
-	- job: Android
-	  dependsOn: Test
-	  pool:
-	    vmImage: 'VS2017-Win2016'
-	
+    
+- task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
 
-	  variables:
-	    buildConfiguration: 'Release'
-	    outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
-	
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testRunner: VSTest
+    testResultsFiles: '**/*.trx'
 
-	  steps:
-	  - task: NuGetToolInstaller@0
-	
-
-	  - task: NuGetCommand@2
-	    inputs:
-	      restoreSolution: '**/*.sln'
-	
-
-	  - task: XamarinAndroid@1
-	    inputs:
-	      projectFile: '**/*droid*.csproj'
-	      outputDirectory: '$(outputDirectory)'
-	      configuration: '$(buildConfiguration)'
-	
-
-	
-
-	
-
-	  - task: AndroidSigning@3
-	    inputs:
-	      apksign: false
-	      zipalign: false
-	      apkFiles: '$(outputDirectory)/*.apk'
-	
-
-	  - task: PublishBuildArtifacts@1
-	    inputs:
-	      pathtoPublish: '$(outputDirectory)'
 
 
 
