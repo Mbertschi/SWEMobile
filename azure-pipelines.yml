@@ -36,12 +36,6 @@ steps:
     arguments: '--configuration $(buildConfiguration)'
 
 
-- task: Xcode@5
-  inputs:
-    actions: 'build'
-    packageApp: true
-    signingOption: 'auto'
-
 
 - task: AndroidSigning@3
   inputs:
