@@ -10,39 +10,73 @@ trigger:
 pool:
   vmImage: 'macos-latest'
 
-variables:
-  buildConfiguration: 'Release'
-  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+jobs:
+	
 
-steps:
-- task: NuGetToolInstaller@1
+	- job: Test
+	  pool:
+	    vmImage: 'VS2017-Win2016'
+	  steps:
+	  - task: NuGetToolInstaller@0
+	
 
-- task: NuGetCommand@2
-  inputs:
-    command: 'restore'
-    restoreSolution: '**/*.sln'
+	  - task: NuGetCommand@2
+	    inputs:
+	      restoreSolution: '**/*.sln'
+	  - task: DotNetCoreCLI@2
+	    displayName: Build
+	    inputs:
+	        command: build
+	        projects: '**/*Test*.csproj'
+	        arguments: '--configuration Release'
+	  - task: DotNetCoreCLI@2
+	    inputs:
+	      command: 'test'
+	      projects: '**/*Test*.csproj'
+	
 
-- task: XamarinAndroid@1
-  inputs:
-    projectFile: '**/*droid*.csproj'
-    outputDirectory: '$(outputDirectory)'
-    configuration: '$(buildConfiguration)'
+	- job: Android
+	  dependsOn: Test
+	  pool:
+	    vmImage: 'VS2017-Win2016'
+	
 
-# do this after other tasks such as building
+	  variables:
+	    buildConfiguration: 'Release'
+	    outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+	
 
-    
-- task: DotNetCoreCLI@2
-  inputs:
-    command: test
-    projects: '**/*Tests/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
+	  steps:
+	  - task: NuGetToolInstaller@0
+	
 
+	  - task: NuGetCommand@2
+	    inputs:
+	      restoreSolution: '**/*.sln'
+	
 
-- task: PublishTestResults@2
-  condition: succeededOrFailed()
-  inputs:
-    testRunner: VSTest
-    testResultsFiles: '**/*.trx'
+	  - task: XamarinAndroid@1
+	    inputs:
+	      projectFile: '**/*droid*.csproj'
+	      outputDirectory: '$(outputDirectory)'
+	      configuration: '$(buildConfiguration)'
+	
+
+	
+
+	
+
+	  - task: AndroidSigning@3
+	    inputs:
+	      apksign: false
+	      zipalign: false
+	      apkFiles: '$(outputDirectory)/*.apk'
+	
+
+	  - task: PublishBuildArtifacts@1
+	    inputs:
+	      pathtoPublish: '$(outputDirectory)'
+
 
 
 
